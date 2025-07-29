@@ -204,7 +204,7 @@ MIT License - Free for commercial and personal use.
 
 ## 🔬 Research
 
-Based on ["Genetic-Evolutionary Prompt Architecture: Efficient Automatic Prompt Optimization"](https://arxiv.org/abs/2507.19457) - Research demonstrating that natural language reflection provides richer optimization signals than traditional policy gradients.
+Based on ["Genetic-Evolutionary Prompt Architecture: Efficient Automatic Prompt Optimization"](https://arxiv.org/abs/2507.19457) - Research demonstrating that natural language reflection provides richer optimization signals than traditional policy gradients [alone].
 
 **Built With:**
 - [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) - Claude Desktop integration
