@@ -160,11 +160,49 @@ main() {
     if [[ -f "$CLAUDE_CONFIG_PATH" ]]; then
         print_status "Backing up existing Claude Desktop config..."
         cp "$CLAUDE_CONFIG_PATH" "${CLAUDE_CONFIG_PATH}.backup.$(date +%Y%m%d_%H%M%S)"
-        print_success "Config backed up to ${CLAUDE_CONFIG_PATH}.backup.$(date +%Y%m%d_%H%M%S)"
-    fi
-    
-    # Create new config with GEPA MCP server
-    cat > "$CLAUDE_CONFIG_PATH" << EOF
+        print_success "Config backed up"
+        
+        # Check if config already has gepa-mcp
+        if grep -q '"gepa-mcp"' "$CLAUDE_CONFIG_PATH"; then
+            print_success "GEPA MCP server already configured in Claude Desktop"
+        else
+            print_status "Adding GEPA MCP server to existing Claude Desktop config..."
+            # Use Python to properly merge JSON
+            python3 << EOF
+import json
+import os
+
+config_path = "$CLAUDE_CONFIG_PATH"
+current_dir = "$CURRENT_DIR"
+
+# Read existing config
+try:
+    with open(config_path, 'r') as f:
+        config = json.load(f)
+except:
+    config = {"mcpServers": {}}
+
+# Ensure mcpServers exists
+if "mcpServers" not in config:
+    config["mcpServers"] = {}
+
+# Add GEPA MCP server
+config["mcpServers"]["gepa-mcp"] = {
+    "command": "uv",
+    "args": ["run", "python", "run_server.py"],
+    "cwd": current_dir,
+    "env": {}
+}
+
+# Write updated config
+with open(config_path, 'w') as f:
+    json.dump(config, f, indent=2)
+EOF
+            print_success "GEPA MCP server added to existing configuration"
+        fi
+    else
+        # Create new config with GEPA MCP server
+        cat > "$CLAUDE_CONFIG_PATH" << EOF
 {
   "mcpServers": {
     "gepa-mcp": {
@@ -176,6 +214,8 @@ main() {
   }
 }
 EOF
+        print_success "New Claude Desktop config created"
+    fi
     
     print_success "Claude Desktop configured with GEPA MCP server"
     print_status "Config file location: $CLAUDE_CONFIG_PATH"
@@ -238,14 +278,15 @@ EOF
         echo -e "  3. Start optimizing your prompts! 🚀"
     fi
     echo ""
-    echo -e "${BLUE}Available Tools:${NC}"
+    echo -e "${BLUE}Core GEPA Tools:${NC}"
     echo -e "  • ${GREEN}optimize_prompt${NC} - Core GEPA genetic-evolutionary optimization"
-    echo -e "  • ${GREEN}quick_prompt_improve${NC} - Fast prompt enhancement"
+    echo -e "  • ${GREEN}quick_prompt_improve${NC} - Fast GEPA-powered improvement"
     echo -e "  • ${GREEN}conversational_optimize${NC} - Context-aware optimization"
-    echo -e "  • ${GREEN}holistic_optimize${NC} - Multi-objective optimization"
-    echo -e "  • ${GREEN}auto_optimize_prompt${NC} - Automated optimization"
-    echo -e "  • ${GREEN}gepa_with_claude_analysis${NC} - Claude-enhanced GEPA"
-    echo -e "  • And 6 more advanced optimization tools!"
+    echo ""
+    echo -e "${BLUE}Research-Backed Features:${NC}"
+    echo -e "  • 10-20% better prompts vs. reinforcement learning"
+    echo -e "  • 35x more efficient than traditional methods"
+    echo -e "  • Genetic-evolutionary approach with natural language reflection"
     echo ""
     echo -e "${BLUE}Documentation:${NC} See README.md for detailed usage examples"
     echo -e "${BLUE}Troubleshooting:${NC} Check the troubleshooting section in README.md"
