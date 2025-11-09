@@ -31,7 +31,7 @@ To summarize:
       url={https://arxiv.org/abs/2507.19457}
 
 
-> **Genetic-Evolutionary Prompt Architecture** for Claude Desktop  
+> **Genetic-Evolutionary Prompt Architecture** for Claude Desktop (or any MCP client)
 > Research-backed automatic prompt optimization
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -64,8 +64,6 @@ The installer will:
 - ✅ **Safely merge** with your existing Claude Desktop config  
 - ✅ Prompt for your Gemini API key
 - ✅ Test the installation
-
-**Ready in under 5 minutes!** 🎉
 
 ## 🛠️ Three Core Tools
 
