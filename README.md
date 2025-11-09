@@ -1,16 +1,19 @@
 I'm not quite sure this works as is 😂 You may need to ask the model you're working with to clean it up:
-"
+
+```
 The GEPA MCP server isn't working. Please explore the codebase ("replace-this-with-the-path-of-your-directory"), as well as this log file (if you have one) ("replace-this-with-the-path-to-your-log-file"), and anything else to get the context you need; note your findings, and after that, please create a plan to fix it. Let me know when you're ready!
 
 To summarize:
-• Explore the codebase
-• Read the log
-• Explore anything else needed for relevant context
-• Note your findings along the way
-• Create a plan to fix it.
-• Then [share your plan] or [go ahead and fix it]
-"
-- *Note, I'm not sure if that 'fix' prompt will work; it may; but just an example.
+- Explore the codebase
+- Read the log
+- Explore anything else needed for relevant context
+- Note your findings along the way
+- Create a plan to fix it.
+- Then [share your plan] or [go ahead and fix it]
+```
+
+- *Note, I'm not sure if that 'fix' prompt will work; it may; but just an example.*
+```
  
 # GEPA MCP Server
 
