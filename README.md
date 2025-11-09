@@ -1,4 +1,32 @@
+I'm not quite sure this works as is 😂 You may need to ask the model you're working with to clean it up:
+"
+The GEPA MCP server isn't working. Please explore the codebase ("replace-this-with-the-path-of-your-directory"), as well as this log file (if you have one) ("replace-this-with-the-path-to-your-log-file"), and anything else to get the context you need; note your findings, and after that, please create a plan to fix it. Let me know when you're ready!
+
+To summarize:
+• Explore the codebase
+• Read the log
+• Explore anything else needed for relevant context
+• Note your findings along the way
+• Create a plan to fix it.
+• Then [share your plan] or [go ahead and fix it]
+"
+- *Note, I'm not sure if that 'fix' prompt will work; it may; but just an example.
+ 
 # GEPA MCP Server
+
+- Thank you to the brilliant researchers who created this system;
+- Check out the original research here: https://arxiv.org/abs/2507.19457
+- As well as their repository for the official implementation of the algorithm: https://github.com/gepa-ai/gepa
+
+@misc{agrawal2025gepareflectivepromptevolution,
+      title={GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning}, 
+      author={Lakshya A Agrawal and Shangyin Tan and Dilara Soylu and Noah Ziems and Rishi Khare and Krista Opsahl-Ong and Arnav Singhvi and Herumb Shandilya and Michael J Ryan and Meng Jiang and Christopher Potts and Koushik Sen and Alexandros G. Dimakis and Ion Stoica and Dan Klein and Matei Zaharia and Omar Khattab},
+      year={2025},
+      eprint={2507.19457},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2507.19457}
+
 
 > **Genetic-Evolutionary Prompt Architecture** for Claude Desktop  
 > Research-backed automatic prompt optimization
@@ -186,6 +214,18 @@ rm .env && ./install.sh
 - **Speed**: 30-120 seconds for full optimization  
 - **Efficiency**: 35x fewer API calls vs traditional methods
 - **Success Rate**: 95%+ meaningful improvements
+
+## 🫂 References & Citations
+- Thank you to the brilliant minds that actually did this research, and shared their work with everyone;
+@misc{agrawal2025gepareflectivepromptevolution,
+      title={GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning}, 
+      author={Lakshya A Agrawal and Shangyin Tan and Dilara Soylu and Noah Ziems and Rishi Khare and Krista Opsahl-Ong and Arnav Singhvi and Herumb Shandilya and Michael J Ryan and Meng Jiang and Christopher Potts and Koushik Sen and Alexandros G. Dimakis and Ion Stoica and Dan Klein and Matei Zaharia and Omar Khattab},
+      year={2025},
+      eprint={2507.19457},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2507.19457}, 
+
 
 ## 🤝 Contributing
 
