@@ -13,7 +13,7 @@ To summarize:
 ```
 
 - *Note, I'm not sure if that 'fix' prompt will work; it may; but just an example.*
-```
+
  
 # GEPA MCP Server
 
