@@ -6,7 +6,7 @@ The GEPA MCP server isn't working. Please explore the codebase ("replace-this-wi
 To summarize:
 - Explore the codebase
 - Read the log
-- Explore anything else needed for relevant context
+- Explore anything else needed for relevant context (including search/browse as needed)
 - Note your findings along the way
 - Create a plan to fix it.
 - Then [share your plan] or [go ahead and fix it]
