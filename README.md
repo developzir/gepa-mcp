@@ -21,16 +21,6 @@ To summarize:
 - Check out the original research here: https://arxiv.org/abs/2507.19457
 - As well as their repository for the official implementation of the algorithm: https://github.com/gepa-ai/gepa
 
-@misc{agrawal2025gepareflectivepromptevolution,
-      title={GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning}, 
-      author={Lakshya A Agrawal and Shangyin Tan and Dilara Soylu and Noah Ziems and Rishi Khare and Krista Opsahl-Ong and Arnav Singhvi and Herumb Shandilya and Michael J Ryan and Meng Jiang and Christopher Potts and Koushik Sen and Alexandros G. Dimakis and Ion Stoica and Dan Klein and Matei Zaharia and Omar Khattab},
-      year={2025},
-      eprint={2507.19457},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2507.19457}
-
-
 > **Genetic-Evolutionary Prompt Architecture** for Claude Desktop (or any MCP client)
 > Research-backed automatic prompt optimization
 
