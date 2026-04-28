@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/developzir-gepa-mcp-badge.png)](https://mseep.ai/app/developzir-gepa-mcp)
+
 I'm not quite sure this works as is 😂 You may need to ask the model you're working with to clean it up:
 
 ```
